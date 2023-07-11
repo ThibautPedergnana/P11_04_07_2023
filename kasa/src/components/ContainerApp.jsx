@@ -1,19 +1,17 @@
 import React from "react";
 import Footer from "./footer";
 import Header from "./header";
+import styled from "styled-components";
+
+const App = styled.div`
+  padding: 0 100px;
+`;
 
 function ContainerApp({ children }) {
   return (
-    <div className="container-app">
+    <div>
       <Header />
-      <div
-        className="app"
-        style={{
-          padding: "0 100px",
-        }}
-      >
-        {children}
-      </div>
+      <App>{children}</App>
       <Footer />
     </div>
   );

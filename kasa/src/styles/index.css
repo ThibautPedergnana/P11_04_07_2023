@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Montserrat";
-  src: local("Montserrat"),
-    url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-family: "Montserrat-Bold";
+  src: local("Montserrat-Bold"),
+    url("../fonts/Montserrat-Bold.ttf") format("truetype");
 }
 
 body {
   margin: 0;
-  font-family: "Montserrat", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+  font-family: "Montserrat-Bold", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -13,13 +13,14 @@ const ListLocation = styled.div`
 `;
 
 const ContainerCard = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 60px;
   justify-content: space-evenly;
   border-radius: 25px;
   background: #f6f6f6;
   padding: 56px 50px;
-  gap: 60px;
-  flex-wrap: wrap;
+  margin-top: 43px;
 `;
 
 function Home() {

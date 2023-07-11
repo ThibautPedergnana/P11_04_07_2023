@@ -12,6 +12,7 @@ const BannerContainer = styled.div`
 
 const ImgBanner = styled.img`
   width: 100%;
+  max-height: 230px;
 `;
 
 const TextBanner = styled.h3`

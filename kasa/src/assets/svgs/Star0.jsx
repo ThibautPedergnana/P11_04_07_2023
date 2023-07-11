@@ -1,6 +1,6 @@
 import React from "react";
 
-function Star1() {
+function Star0() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -33,4 +33,4 @@ function Star1() {
   );
 }
 
-export default Star1;
+export default Star0;

@@ -5,9 +5,9 @@ import colors from "../../utils/style/colors";
 
 const MainHeader = styled.header`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 40px 100px;
 `;
 
 const Logo = styled.img`

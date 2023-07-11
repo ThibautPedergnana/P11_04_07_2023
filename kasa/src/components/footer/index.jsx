@@ -7,6 +7,7 @@ const MainFooter = styled.footer`
   align-items: center;
   background-color: black;
   padding: 10px;
+  margin-top: 43px;
 `;
 
 const LogoFooter = styled.img`
@@ -20,7 +21,7 @@ const Copyright = styled.p`
 function Footer() {
   return (
     <MainFooter>
-      <LogoFooter src={logo_footer} className="App-logo" alt="logo" />
+      <LogoFooter src={logo_footer} alt="logo" />
       <Copyright>© 2020 Kasa. All rights reserved</Copyright>
     </MainFooter>
   );

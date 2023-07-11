@@ -27,6 +27,7 @@ const ImgCard = styled.img`
   object-fit: cover;
   height: 100%;
   width: 100%;
+  border-radius: 10px;
 `;
 
 function Card({ item, onClick }) {

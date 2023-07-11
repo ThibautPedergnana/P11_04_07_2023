@@ -6,6 +6,7 @@ const ErrorWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 150px;
 `;
 
 const ErrorContainer = styled.div`
@@ -25,12 +26,13 @@ const ErrorMessage = styled.p`
 `;
 
 const HomeLink = styled(Link)`
-  text-decoration: none;
+  text-decoration: underline;
   color: ${colors.primary};
   margin-top: 10rem;
+  transition: 0.3s transform;
   &:hover {
     cursor: pointer;
-    text-decoration: underline;
+    transform: scale(1.1);
   }
 `;
 
