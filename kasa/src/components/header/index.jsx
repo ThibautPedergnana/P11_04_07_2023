@@ -8,10 +8,17 @@ const MainHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 40px 100px;
+  @media (max-width: 768px) {
+    padding: 20px 25px;
+  }
+`;
+
+const LinkLogo = styled(Link)`
+  width: 17%;
 `;
 
 const Logo = styled.img`
-  width: 40%;
+  width: 100%;
 `;
 
 const NavLink = styled(Link)`
@@ -22,14 +29,15 @@ const NavLink = styled(Link)`
     cursor: pointer;
     text-decoration: underline;
   }
+  font-size: 24px;
 `;
 
 function Header() {
   return (
     <MainHeader>
-      <Link to="/">
+      <LinkLogo to="/">
         <Logo src={logo} className="App-logo" alt="logo" />
-      </Link>
+      </LinkLogo>
       <nav>
         <NavLink to="/">Accueil</NavLink>
         <NavLink to="/About">A propos</NavLink>

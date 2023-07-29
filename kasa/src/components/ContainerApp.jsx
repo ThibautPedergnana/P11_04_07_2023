@@ -5,6 +5,9 @@ import styled from "styled-components";
 
 const App = styled.div`
   padding: 0 100px;
+  @media (max-width: 768px) {
+    padding: 0 25px;
+  }
 `;
 
 function ContainerApp({ children }) {
@@ -12,7 +15,7 @@ function ContainerApp({ children }) {
     <div>
       <Header />
       <App>{children}</App>
-      <Footer />
+      <Footer style={{ bottom: 0 }} />
     </div>
   );
 }

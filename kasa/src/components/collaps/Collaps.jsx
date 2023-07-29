@@ -9,6 +9,10 @@ const CollapsContent = styled.div`
   background: #f6f6f6;
   transition: 0.2s all ease-in;
   opacity: 0;
+  padding: 30px;
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
 `;
 
 const CollapsArrow = styled.div`
@@ -19,7 +23,10 @@ const CollapsArrow = styled.div`
 const CollapsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1023px;
+  width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
   &.opened {
     ${CollapsArrow} {
       transform: rotate(180deg);
@@ -55,10 +62,20 @@ const CollapsDescription = styled.div`
   font-weight: 400;
   line-height: 142.6%;
   font-size: 24px;
-  padding: 30px;
 `;
 
-function Collaps({ title, description, isLong = false }) {
+const CollapsList = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const CollapsItem = styled.div`
+  color: #ff6060;
+  font-family: Montserrat;
+  font-size: 24px;
+`;
+
+function Collaps({ title, description }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -69,8 +86,18 @@ function Collaps({ title, description, isLong = false }) {
           <ArrowSvg />
         </CollapsArrow>
       </CollapsHeader>
-      <CollapsContent $isLong={isLong}>
-        <CollapsDescription>{description}</CollapsDescription>
+      <CollapsContent>
+        {typeof description === "string" ? (
+          <CollapsDescription>{description}</CollapsDescription>
+        ) : (
+          <CollapsList>
+            {description.map((item, index) => (
+              <CollapsItem key={"description-collaps-" + index}>
+                {item}
+              </CollapsItem>
+            ))}
+          </CollapsList>
+        )}
       </CollapsContent>
     </CollapsContainer>
   );

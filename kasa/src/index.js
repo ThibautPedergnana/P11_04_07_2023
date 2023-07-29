@@ -6,7 +6,6 @@ import Home from "./pages/home/index";
 import Error from "./pages/error/index";
 import About from "./pages/about/index";
 import Detail from "./pages/detail/Detail";
-// import Header from "./components/header/index";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
