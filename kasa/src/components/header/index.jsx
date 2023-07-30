@@ -15,10 +15,18 @@ const MainHeader = styled.header`
 
 const LinkLogo = styled(Link)`
   width: 17%;
+  @media (max-width: 375px) {
+    width: 40%;
+  }
 `;
 
 const Logo = styled.img`
   width: 100%;
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  gap: 25px;
 `;
 
 const NavLink = styled(Link)`
@@ -30,6 +38,10 @@ const NavLink = styled(Link)`
     text-decoration: underline;
   }
   font-size: 24px;
+  @media (max-width: 375px) {
+    font-size: 12px;
+    margin: 0;
+  }
 `;
 
 function Header() {
@@ -38,10 +50,10 @@ function Header() {
       <LinkLogo to="/">
         <Logo src={logo} className="App-logo" alt="logo" />
       </LinkLogo>
-      <nav>
+      <Nav>
         <NavLink to="/">Accueil</NavLink>
         <NavLink to="/About">A propos</NavLink>
-      </nav>
+      </Nav>
     </MainHeader>
   );
 }

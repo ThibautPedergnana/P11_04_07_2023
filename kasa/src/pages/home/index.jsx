@@ -6,13 +6,7 @@ import BannerImg from "../../assets/banner-list.png";
 import Card from "../../components/card/Card";
 import { useNavigate } from "react-router-dom";
 
-// const ListLocation = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   flex-direction: column;
-// `;
-
-const ListLocation2 = styled.div.attrs({ className: "ListLoc" })`
+const ListLocation = styled.div.attrs({ className: "ListLoc" })`
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -24,10 +18,15 @@ const ContainerCard = styled.div`
   gap: 60px;
   justify-content: space-evenly;
   border-radius: 25px;
-  border-radius: 25px;
   background: #f6f6f6;
   padding: 56px 50px;
   margin-top: 43px;
+  @media (max-width: 375px) {
+    margin-top: 22px;
+    background: 0;
+    padding: 0;
+    gap: 22px;
+  }
 `;
 
 function Home() {
@@ -35,7 +34,7 @@ function Home() {
 
   return (
     <ContainerApp>
-      <ListLocation2>
+      <ListLocation>
         <Banner title="Chez vous, partout et ailleurs" imgUrl={BannerImg} />
         <ContainerCard>
           {logementsJson.map((logement) => (
@@ -46,7 +45,7 @@ function Home() {
             />
           ))}
         </ContainerCard>
-      </ListLocation2>
+      </ListLocation>
     </ContainerApp>
   );
 }

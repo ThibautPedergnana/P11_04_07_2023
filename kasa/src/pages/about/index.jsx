@@ -9,7 +9,6 @@ const ContainerAbout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 31px;
   margin-top: 40px;
 `;
 

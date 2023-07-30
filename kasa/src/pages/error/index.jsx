@@ -7,6 +7,9 @@ const ErrorWrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 150px;
+  @media (max-width: 375px) {
+    padding: 150px 60px;
+  }
 `;
 
 const ErrorContainer = styled.div`
@@ -18,11 +21,19 @@ const ErrorContainer = styled.div`
 const ErrorNumber = styled.span`
   color: ${colors.primary};
   font-size: 15rem;
+  @media (max-width: 375px) {
+    font-size: 96px;
+    font-weight: 600;
+  }
 `;
 
 const ErrorMessage = styled.p`
   color: ${colors.primary};
   font-size: 1.5rem;
+  @media (max-width: 375px) {
+    font-size: 18px;
+    text-align: center;
+  }
 `;
 
 const HomeLink = styled(Link)`

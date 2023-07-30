@@ -5,6 +5,9 @@ const PrevArrowSvg = styled.svg`
   position: absolute;
   margin-left: 15px;
   cursor: pointer;
+  @media (max-width: 375px) {
+    width: 12px;
+  }
 `;
 
 function PrevArrow(props) {

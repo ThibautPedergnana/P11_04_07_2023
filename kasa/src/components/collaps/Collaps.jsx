@@ -11,22 +11,26 @@ const CollapsContent = styled.div`
   opacity: 0;
   padding: 30px;
   @media (max-width: 768px) {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 `;
 
 const CollapsArrow = styled.div`
-  margin-right: 18px;
+  margin-right: 16px;
   transition: 0.2s transform ease-in;
+  @media (max-width: 375px) {
+    margin-right: 8px;
+  }
 `;
 
 const CollapsContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 75%;
   @media (max-width: 768px) {
     width: 100%;
   }
+
   &.opened {
     ${CollapsArrow} {
       transform: rotate(180deg);
@@ -45,14 +49,17 @@ const CollapsHeader = styled.div`
   background: #ff6060;
   padding: 5px 0px 7px 18px;
   cursor: pointer;
+  align-items: center;
+  @media (max-width: 768px) {
+    padding: 0 0 0 18px;
+  }
 `;
+
 const CollapsTitle = styled.div`
   color: #fff;
-  font-family: Montserrat;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 142.6%;
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 const CollapsDescription = styled.div`
@@ -62,6 +69,9 @@ const CollapsDescription = styled.div`
   font-weight: 400;
   line-height: 142.6%;
   font-size: 24px;
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 const CollapsList = styled.div`
@@ -73,6 +83,9 @@ const CollapsItem = styled.div`
   color: #ff6060;
   font-family: Montserrat;
   font-size: 24px;
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 function Collaps({ title, description }) {

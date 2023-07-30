@@ -6,6 +6,9 @@ const NextArrowSvg = styled.svg`
   right: 0;
   margin-right: 15px;
   cursor: pointer;
+  @media (max-width: 375px) {
+    width: 12px;
+  }
 `;
 
 function NextArrow(props) {

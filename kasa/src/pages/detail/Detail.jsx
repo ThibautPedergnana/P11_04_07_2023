@@ -13,15 +13,6 @@ import Collaps from "../../components/collaps/Collaps";
 import { useNavigate } from "react-router-dom";
 import colors from "../../utils/style/colors";
 
-const StarsContainer = styled.div`
-  width: 196px;
-  height: 36px;
-  margin-top: 20px;
-  @media (max-width: 768px) {
-    margin-bottom: 20px;
-  }
-`;
-
 const HeaderInfo = styled.div`
   display: flex;
   justify-content: space-between;
@@ -30,6 +21,9 @@ const HeaderInfo = styled.div`
   margin-bottom: 25px;
   @media (max-width: 768px) {
     flex-direction: column;
+  }
+  @media (max-width: 375px) {
+    margin-top: 22px;
   }
 `;
 
@@ -64,6 +58,10 @@ const TagInfo = styled.div`
   display: flex;
   gap: 10px;
   margin-top: 15px;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 const Tags = styled.span`
@@ -71,8 +69,14 @@ const Tags = styled.span`
   background-color: ${colors.primary};
   color: ${colors.white};
   padding: 3px 30px 2px;
-  border-radius: 12px;
+  border-radius: 5px;
   font-size: 16px;
+  @media (max-width: 768px) {
+    font-weight: 500;
+    font-size: 10px;
+    padding: 3px 20px 2px;
+    align-items: center;
+  }
 `;
 
 const RightInfo = styled.div`
@@ -84,6 +88,9 @@ const RightInfo = styled.div`
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
+  }
+  @media (max-width: 375px) {
+    margin-top: 10px;
   }
 `;
 
@@ -97,12 +104,31 @@ const HostName = styled.h2`
   font-weight: 100;
   margin-right: 10px;
   font-size: 20px;
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 `;
 
 const HostPic = styled.img`
   width: 64px;
   height: 64px;
   border-radius: 100px;
+  @media (max-width: 375px) {
+    width: 32px;
+    height: 32px;
+  }
+`;
+
+const StarsContainer = styled.div`
+  width: 196px;
+  height: 36px;
+  margin-top: 20px;
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 375px) {
+    width: 98px;
+  }
 `;
 
 const CollapsInfo = styled.div`
